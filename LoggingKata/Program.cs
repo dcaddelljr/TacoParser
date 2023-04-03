@@ -8,7 +8,7 @@ namespace LoggingKata
     class Program
     {
         static readonly ILog logger = new TacoLogger();
-        const string csvPath = "TacoBell-US-AL.csv";
+        const string csvPath = "TacoBell-US-AL.csv"; //csvPath --> where to locate the CSV file
 
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace LoggingKata
 
             // use File.ReadAllLines(path) to grab all the lines from your csv file
             // Log and error if you get 0 lines and a warning if you get 1 line
-            var lines = File.ReadAllLines(csvPath);
+            var lines = File.ReadAllLines(csvPath); //going to read all 237 lines and turn them into a string
 
             logger.LogInfo($"Lines: {lines[0]}");
 
@@ -27,7 +27,7 @@ namespace LoggingKata
             var parser = new TacoParser();
 
             // Grab an IEnumerable of locations using the Select command: var locations = lines.Select(parser.Parse);
-            var locations = lines.Select(parser.Parse).ToArray();
+            var locations = lines.Select(line=>parser.Parse(line)).ToArray();
 
             // DON'T FORGET TO LOG YOUR STEPS
 
@@ -36,7 +36,7 @@ namespace LoggingKata
             // TODO: Create two `ITrackable` variables with initial values of `null`. These will be used to store your two taco bells that are the farthest from each other.
             // Create a `double` variable to store the distance
 
-            // Include the Geolocation toolbox, so you can compare locations: `using GeoCoordinatePortable;`
+            // Include the Geolocation toolbox, so you can compare locations: `using GeoCoordinatePortable;`  <---- GOOGLE THIS
 
             //HINT NESTED LOOPS SECTION---------------------
             // Do a loop for your locations to grab each location as the origin (perhaps: `locA`)
