@@ -18,8 +18,6 @@ namespace LoggingKata.Test
 
             //Assert
             Assert.NotNull(actual); //This is going to test something that isn't null
-
-
         }
 
         [Theory]
@@ -29,6 +27,7 @@ namespace LoggingKata.Test
         [InlineData("33.648244, -84.011856, Taco Bell Acwort...", -84.011856)]
         [InlineData("33.450442, -86.984822, Taco Bell Hueytow...", -86.984822)]
         [InlineData("33.849014, -87.279978, Taco Bell Jasper...", -87.279978)]
+
         public void ShouldParseLongitude(string line, double expected)
             // This is a method that will run a test for us...PARSE will take a string and turn it into a Taco Bell/
         {
@@ -54,6 +53,7 @@ namespace LoggingKata.Test
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", 34.073638)]
         [InlineData("32.381582, -86.215604, Taco Bell Montgomer...", 32.381582)]
         [InlineData("30.157708, -85.591198, Taco Bell Panama Cit...", 30.157708)]
+
         public void ShouldParseLatitude(string line, double expected)
         {
             // TODO: Complete - "line" represents input data we will Parse to
