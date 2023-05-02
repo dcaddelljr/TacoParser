@@ -22,7 +22,7 @@ namespace LoggingKata.Test
 
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
-        [InlineData("32.571331, - 85.499655, Taco Bell Auburn...",- 85.499655)]
+        [InlineData("32.571331, -85.499655, Taco Bell Auburn...",- 85.499655)]
         [InlineData("33.587217, -85.057114, Taco Bell Carrollto...", -85.057114)]
         [InlineData("33.648244, -84.011856, Taco Bell Acwort...", -84.011856)]
         [InlineData("33.450442, -86.984822, Taco Bell Hueytow...", -86.984822)]
